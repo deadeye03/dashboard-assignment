@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import {Roboto} from 'next/font/google';
+import Navbar from "../components/Navbar";
+import { Suspense } from "react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -12,6 +15,14 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+
+const getRoboto=Roboto({
+  subsets:['greek-ext'],
+  display:'swap',
+  variable:'--font-Roboto',
+  weight:'400'
+
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,11 +36,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Suspense>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Navbar/>
+        <main className="mt-20 bg-gradient-to-r from-[#e2e6e8] to-[#f4faf9] w-full h-full">
         {children}
-      </body>
+
+        </main>
+      </body>             
+      </Suspense>
     </html>
   );
 }
