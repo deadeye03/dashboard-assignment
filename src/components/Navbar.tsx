@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-import { RxDropdownMenu } from 'react-icons/rx'
 import { MdArrowDropDown } from 'react-icons/md'
 import CustomeButton from './CustomeButton'
 function Navbar() {

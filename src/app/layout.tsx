@@ -38,7 +38,7 @@ export default function RootLayout({
     <html lang="en">
       <Suspense>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable}${getRoboto.variable} antialiased`}
       >
         <Navbar/>
         <main className="mt-20 bg-gradient-to-r from-[#e2e6e8] to-[#f4faf9] w-full h-full">

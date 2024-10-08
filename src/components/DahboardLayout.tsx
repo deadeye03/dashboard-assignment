@@ -1,6 +1,5 @@
 import React from 'react'
 import CustomeButton from './CustomeButton'
-import { Star } from 'lucide-react'
 import { IoIosStar } from 'react-icons/io'
 import Image from 'next/image'
 import Promise from './Promise'
